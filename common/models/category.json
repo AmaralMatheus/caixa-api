@@ -1,0 +1,28 @@
+{
+  "name": "Category",
+  "plural": "categories",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "mysql": {
+      "schema": "caixa",
+      "table": "categories"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true,
+      "generated": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

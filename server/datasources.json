@@ -1,0 +1,11 @@
+{
+  "db": {
+    "host": "/cloudsql/caixa-api:us-central1:root",
+    "socketPath": "/cloudsql/caixa-api:us-central1:root",
+    "database": "caixa",
+    "username": "root",
+    "password": "LokomiaHu3",
+    "name": "db",
+    "connector": "mysql"
+  }
+}

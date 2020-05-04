@@ -1,0 +1,18 @@
+{
+  "prod": {
+    "driver": "mysql",
+    "user": "root",
+    "password": "",
+    "database": "caixa"
+  },
+
+  "mysql": {
+    "driver": "mysql",
+    "user": "root",
+    "password": "",
+    "host": "localhost",
+    "database": "caixa",
+    "ssl": "false",
+    "schema": "caixa"
+  }
+}

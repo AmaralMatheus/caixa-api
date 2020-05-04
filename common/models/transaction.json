@@ -1,0 +1,58 @@
+{
+  "name": "Transaction",
+  "plural": "transactions",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "mysql": {
+      "schema": "caixa",
+      "table": "transactions"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true,
+      "generated": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "amount": {
+      "type": "number",
+      "dataType": "float",
+      "required": true,
+      "default": 0,
+      "precision": 10,
+      "scale": 2
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "category": {
+      "type": "belongsTo",
+      "model": "Category",
+      "foreignKey": "category_id"
+    },
+    "caixa": {
+      "type": "belongsTo",
+      "model": "Caixa",
+      "foreignKey": "caixa_id"
+    }
+  },
+  "acls": [],
+  "methods": {},
+  "scope": {
+    "order": "date DESC"
+  }
+}

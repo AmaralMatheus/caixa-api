@@ -1,0 +1,42 @@
+{
+  "name": "Caixa",
+  "plural": "caixas",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "mysql": {
+      "schema": "caixa",
+      "table": "caixa"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true,
+      "generated": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "saldo": {
+      "type": "number",
+      "dataType": "float",
+      "required": true,
+      "default": 0,
+      "precision": 10,
+      "scale": 2
+    }
+  },
+  "validations": [],
+  "relations": {
+    "transactions": {
+      "type": "hasMany",
+      "model": "Transaction",
+      "foreignKey": "caixa_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

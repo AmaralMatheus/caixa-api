@@ -1,0 +1,31 @@
+{
+  "name": "user",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "caixas": {
+      "type": "hasMany",
+      "model": "Caixa",
+      "foreignKey": "user_id"
+    },
+    "categorias": {
+      "type": "hasMany",
+      "model": "Category",
+      "foreignKey": "user_id"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}
